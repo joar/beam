@@ -400,7 +400,7 @@ class Stager(object):
         '--dest',
         cache_dir,
         '--platform',
-        'linux',
+        'manylinux1_x86_64',
         '-r',
         requirements_file,
         '--exists-action',
