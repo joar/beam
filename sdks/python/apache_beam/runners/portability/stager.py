@@ -399,13 +399,13 @@ class Stager(object):
         'download',
         '--dest',
         cache_dir,
+        '--platform',
+        'linux',
         '-r',
         requirements_file,
         '--exists-action',
         'i',
-        # Download from PyPI source distributions.
-        '--no-binary',
-        ':all:'
+        '--no-deps',
     ]
     logging.info('Executing command: %s', cmd_args)
     processes.check_call(cmd_args)
